@@ -121,6 +121,14 @@ const ScreenshotToolSettingsWidget = new GObject.Class({
 
     prefs.add(switchShowIndicator.hbox, {fill: false});
 
+    /* Show notifications [on|off] */
+
+    let switchShowNotifications = buildConfigSwitch(
+      _('Show notifications'),
+      Config.KeyEnableNotifications
+    );
+
+    prefs.add(switchShowNotifications.hbox, {fill: false});
 
     /* Default click action [dropdown] */
 
